@@ -3,71 +3,8 @@
 <head>
     <link rel="stylesheet" href="Sunday.css">
     <title>Sunday</title>
-
-    <style>
-        body {
-          background-color: rgb(37, 37, 37);
-        }
-        .confetti {
-          box-shadow: 2px 2px 10px 2px black;
-          position: absolute;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          animation: confetti 1s ease-in-out infinite;
-        }
-        @keyframes confetti {
-          0% {
-            transform: translate(0, -1250px) rotate(0deg);
-          }
-          100% {
-            transform: translate() rotate(360deg);
-          }
-        }
-        @media only screen and (max-width: 1000px){
-          .confetti {
-          position: absolute;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          animation: confetti 1s ease-in-out infinite;
-        }
-        @keyframes confetti {
-          0% {
-            transform: translate(0, -2600px) rotate(0deg);
-          }
-          100% {
-            transform: translate() rotate(360deg);
-          }
-        }
-        }
-    </style>
-
 </head>
 <body>
-
-    <script>
-        function createConfetti() {
-          const confetti = document.createElement("div");
-          confetti.classList.add("confetti");
-          confetti.style.backgroundColor = getRandomColor();
-          confetti.style.left = Math.random() * window.innerWidth + "px";
-          confetti.style.animationDelay = Math.random() + "s";
-          document.body.appendChild(confetti);
-          setTimeout(() => {
-            confetti.remove();
-          }, 5000);
-        }
-        function getRandomColor() {
-          const letters = "0123456789ABCDEF";
-          let color = "#";
-          for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-          }
-          return color;
-        }
-        setInterval(createConfetti, 100);
-      </script>
 
     <div class="Page-Heading">
         <h1 class="Header">REST</h1>
