@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Wednesday.css">
+    <title>Wednesday</title>
+
+    <style>
+        body {
+          background-color: rgb(37, 37, 37);
+        }
+        .confetti {
+          box-shadow: 2px 2px 10px 2px black;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          animation: confetti 1s ease-in-out infinite;
+        }
+        @keyframes confetti {
+          0% {
+            transform: translate(0, -1250px) rotate(0deg);
+          }
+          100% {
+            transform: translate() rotate(360deg);
+          }
+        }
+        @media only screen and (max-width: 1000px){
+          .confetti {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          animation: confetti 1s ease-in-out infinite;
+        }
+        @keyframes confetti {
+          0% {
+            transform: translate(0, -2600px) rotate(0deg);
+          }
+          100% {
+            transform: translate() rotate(360deg);
+          }
+        }
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+        function createConfetti() {
+          const confetti = document.createElement("div");
+          confetti.classList.add("confetti");
+          confetti.style.backgroundColor = getRandomColor();
+          confetti.style.left = Math.random() * window.innerWidth + "px";
+          confetti.style.animationDelay = Math.random() + "s";
+          document.body.appendChild(confetti);
+          setTimeout(() => {
+            confetti.remove();
+          }, 5000);
+        }
+        function getRandomColor() {
+          const letters = "0123456789ABCDEF";
+          let color = "#";
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+        setInterval(createConfetti, 100);
+      </script>
+
+    <div class="Page-Heading">
+        <h1 class="Header">REST</h1>
+        <h2 class="Header-2">DAY!</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <ul>
+        <li><a id="Back-Anchor" href="file:///C:/Users/LarsTimNilsson/Desktop/GymTime/GymTime.html">Back To Home Page</a></li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="Video-Div">
+        <video controls loop autoplay>
+            <source src="REST DAY!.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="Bottom-Notch">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi laboriosam nulla voluptatum voluptate iure veritatis neque, debitis molestias sit enim mollitia incidunt alias! Sapiente nobis animi hic illo et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus optio fuga mollitia consectetur dolorum, laboriosam saepe pariatur id at tempora deserunt officia eum fugiat nemo adipisci nesciunt voluptate. Vitae, necessitatibus? ⟨™⟩</p>
+    </div>
+</body>
+</html>
